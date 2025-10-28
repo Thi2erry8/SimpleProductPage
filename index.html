@@ -22,19 +22,38 @@
       }
 
       body {
-        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      .author-info {
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+        padding: 20px;
+        gap: 10px;
+      }
+      .shoe-image {
+        width: fit-content;
+        max-height: 90vh;
+      }
+      .shoe-image img {
+        width: auto;
+        max-height: 90vh;
+        border-radius: 5px;
+      }
+      .shoe-details {
+        flex: 1;
+      }
+      .adress {
         font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
+        color: gray;
       }
 
-      .author-info a {
-        text-decoration: none;
-      }
     </style>
   </head>
   <body>
@@ -67,11 +86,56 @@
     Add to wishlist
   -->
 
-    <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
-    </div>
+         <div class="container">
+                
+                <div class="shoe-image">
+                       <img src="./resources/shoe_image@3x.jpg" alt="">
+                </div>
+
+                <div class="shoe-details">
+                  
+                      <p class="adress"><span style="color: black; font-weight: 600;">Home - Products - </span>Sneakers</p>
+
+                      <h1 class="shoe-title">
+                            Nike Air Zoom Pegasus 38 for Running Men
+                      </h1>
+
+                      <p class="shoe-description">
+                            The Nike Air Zoom Pegasus 38 is a high-performance running shoe designed 
+                            for speed and agility. With its lightweight and responsive midsole, this 
+                            shoe provides a smooth ride and excellent cushioning. The Pegasus 38 features 
+                            a full-length Zoom Air unit for added bounce and a more natural stride. The upper 
+                            is made of a breathable mesh material with a supportive Flyknit construction for a 
+                            snug and comfortable fit.
+                      </p>
+
+                      <h2>Hightlights</h2>
+
+                      <ul class="Hightlights_list">
+                            <li>Lightweight and Responsive Midsole.</li>
+                            <li>Full-Length Zoom Air Unit.</li>
+                            <li>Breathable Mesh Uppe.</li>
+                      </ul>
+
+                      <div class="shoe-info">
+                            <div class="shoe-info-box">
+                                 <p>COLOR</p>
+                                 <p>Black</p>
+                            </div>
+                            <div class="shoe-info-box">
+                                 <p>Size</p>
+                                 <p>10 US</p>
+                            </div>
+                            <div class="">
+                                 <p class="price">$59.00</p>
+                            </div>
+                      </div>
+
+                       <div class="btn-container">
+                             <button class="add-to-cart-btn">Add to cart</button>
+                             <button class="add-to-wishlist-btn">Add to wishlist</button>
+                      </div>
+                </div>
+         </div>
   </body>
 </html>
