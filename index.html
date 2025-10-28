@@ -10,7 +10,10 @@
       type="image/x-icon"
       sizes="96x96"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <title>Shoe Product Page | devChallenges.io</title>
 
     <!--You are welcome to delete these styles or modify them in your own stylesheet -->
@@ -23,6 +26,7 @@
 
       body {
         min-height: 100vh;
+        font-family: 'Outfit', sans-serif;
         width: 100%;
         display: flex;
         align-items: center;
@@ -35,7 +39,7 @@
         justify-content: center;
         width: 90%;
         padding: 20px;
-        gap: 10px;
+        gap: 50px;
       }
       .shoe-image {
         width: fit-content;
@@ -47,13 +51,105 @@
         border-radius: 5px;
       }
       .shoe-details {
-        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
       .adress {
         font-size: 14px;
         color: gray;
       }
+      .shoe-title {
+        width: 60%;
+      }
+      .shoe-description {
+        width: 90%;
+      }
+      .Hightlights_list {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      .shoe-info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;  
+        justify-content: space-evenly;   
+        background: #D2D5DA;
+        padding: 10px 0px;
+        border-radius: 5px;
+        width: 50%;
+      }
+      .shoe-info-box{
+        display: flex;
+        flex-direction: column;
+        align-items: start;  
+        justify-content: center; 
+        font-size: 12PX;  
+        gap: 5px;
+        color: #394150;
+      }
+      .price{
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .btn-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;  
+        justify-content: space-evenly;   
+        gap: 10px;
+        width: 50%;
+      } 
+      .add-to-cart-btn, .add-to-wishlist-btn{
+        width: 100%;
+        padding: 10px 0px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: 'Outfit', sans-serif;
+        cursor: pointer;
+        border: none;
+      }
+      .add-to-cart-btn{
+        background-color: #652CD1;
+        color: white;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+      }
+      .add-to-cart-btn:hover{
+        background-color: #7e3ff2;
+      }
+      .add-to-wishlist-btn{
+        background-color: white;
+        border: 2px solid #D2D5DA;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+      }
+      .add-to-wishlist-btn:hover{
+        background-color: #f0f0f0;
+      } 
 
+      @media(max-width: 769px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .shoe-details{
+          align-items: center;
+          text-align: left;
+          gap: 20px;
+        }
+        .Hightlights_list li{
+          margin: 5px 0;
+        }
+        .shoe-details {
+          width: 100%;
+        }
+        .shoe-info, .btn-container{
+          width: 100%;
+        }
+        .shoe-title, .shoe-description{
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -93,7 +189,7 @@
                 </div>
 
                 <div class="shoe-details">
-                  
+
                       <p class="adress"><span style="color: black; font-weight: 600;">Home - Products - </span>Sneakers</p>
 
                       <h1 class="shoe-title">
@@ -120,11 +216,11 @@
                       <div class="shoe-info">
                             <div class="shoe-info-box">
                                  <p>COLOR</p>
-                                 <p>Black</p>
+                                 <p style="color: black; font-weight: 600;">Black</p>
                             </div>
                             <div class="shoe-info-box">
-                                 <p>Size</p>
-                                 <p>10 US</p>
+                                 <p>SIZE</p>
+                                 <p style="color: black; font-weight: 600;">10 US</p>
                             </div>
                             <div class="">
                                  <p class="price">$59.00</p>
@@ -133,7 +229,7 @@
 
                        <div class="btn-container">
                              <button class="add-to-cart-btn">Add to cart</button>
-                             <button class="add-to-wishlist-btn">Add to wishlist</button>
+                             <button class="add-to-wishlist-btn"><i class="ri-heart-line"></i>Add to wishlist</button>
                       </div>
                 </div>
          </div>
